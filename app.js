@@ -45,3 +45,11 @@ app.post('/api/v1/todos', (req, res) => {
         });
     });
 });
+
+app.delete('/api/v1/todos/:id', function(req, res){
+    const { id } = req.params;
+    db.collection('post').deleteOne({ _id: Number(id) }, function(err, result){
+        if(err){return res.status(400).send({message: 'There is Error'});}
+        res.send({message: 'Delete Success!'});
+    });
+});
