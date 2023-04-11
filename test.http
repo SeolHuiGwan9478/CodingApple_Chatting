@@ -4,9 +4,21 @@ POST http://127.0.0.1:8080/api/v1/todos
 Content-Type: application/json
 
 {
-    "title": "asdfsdfsd",
+    "title": "글쓰기는 글스기스기스기",
     "date": "2023.08.12"
 }
 
 ###
 DELETE http://127.0.0.1:8080/api/v1/todos/3
+
+###
+GET http://127.0.0.1:8080/api/v1/todos/2
+
+###
+PUT http://127.0.0.1:8080/api/v1/edit/1
+Content-Type: application/json
+
+{
+    "title": "hkhkhk",
+    "date": "2023.08.12"
+}
